@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PASSupport</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7f6;
+      color: #24332c;
+    }
+
+    header {
+      background: #244b3b;
+      color: white;
+      padding: 25px 40px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header p {
+      margin-bottom: 0;
+      opacity: 0.8;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .welcome {
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: #244b3b;
+    }
+
+    .number {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    button {
+      background: #244b3b;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>PASSupport</h1>
+  <p>Property Management & Compliance Platform</p>
+</header>
+
+<div class="container">
+
+  <div class="welcome">
+    <h2>Welcome back 👋</h2>
+    <p>Here is an overview of your properties and compliance.</p>
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+      <h2>🏠 Properties</h2>
+      <div class="number">0</div>
+      <p>Properties currently managed</p>
+      <button>View Properties</button>
+    </div>
+
+    <div class="card">
+      <h2>📋 Certificates</h2>
+      <div class="number">0</div>
+      <p>Certificates being tracked</p>
+      <button>View Certificates</button>
+    </div>
+
+    <div class="card">
+      <h2>⚠️ Expiring Soon</h2>
+      <div class="number">0</div>
+      <p>Certificates requiring attention</p>
+      <button>View Alerts</button>
+    </div>
+
+    <div class="card">
+      <h2>👥 Landlords</h2>
+      <div class="number">0</div>
+      <p>Landlord accounts</p>
+      <button>Manage Landlords</button>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
