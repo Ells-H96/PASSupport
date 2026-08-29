@@ -1,20 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("PASSupport is running!");
 
-    const buttons = document.querySelectorAll("button");
+    const propertyButton = document.querySelector(".property-button");
+    const propertiesSection = document.querySelector("#properties-section");
 
-    buttons.forEach((button) => {
-        button.addEventListener("click", (event) => {
-            event.preventDefault();
-
-            const card = button.closest(".card");
-
-            if (card) {
-                alert(
-                    card.querySelector("h2").textContent +
-                    " section selected"
-                );
-            }
+    propertyButton.addEventListener("click", () => {
+        propertiesSection.classList.remove("hidden");
+        propertiesSection.scrollIntoView({
+            behavior: "smooth"
         });
     });
 });
