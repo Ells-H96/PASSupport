@@ -1,75 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>PASSupport</title>
-<link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-<header>
-  <h1>PASSupport</h1>
-  <p>Property Management & Compliance Platform</p>
-</header>
+  <div class="app">
 
-<div class="container">
 
-  <div class="welcome">
-    <h2>Welcome back 👋</h2>
-    <p>Here is an overview of your properties and compliance.</p>
-  </div>
+    <!-- LEFT HAND NAVIGATION -->
+    <aside class="sidebar">
 
-  <div class="cards">
+      <h2>PASSupport</h2>
 
-    <div class="card">
-      <h2>🏠 Properties</h2>
-      <div class="number">0</div>
-      <p>Properties currently managed</p>
-<a href="properties.html" class="button">View Properties</a>
-    </div>
-    </div>
-</div>
+      <button class="nav-button active" data-page="dashboard">
+        Dashboard
+      </button>
 
-<section id="properties-section" class="hidden">
-    <h2>Properties</h2>
+       <button class="nav-button active" data-page="Clients">
+        Clients
+      </button>
 
-    <div class="property-list">
-        <div class="property-item">
+      <button class="nav-button" data-page="properties">
+        Properties
+      </button>
+
+      <button class="nav-button" data-page="certificates">
+        Certificates
+      </button>
+
+      <button class="nav-button" data-page="alerts">
+        ⚠️ Expiring soon
+      </button>
+
+      <button class="nav-button" data-page="Assets">
+        Assets
+      </button>
+
+       <button class="nav-button" data-page="Documents">
+        Documents
+      </button>
+
+    </aside>
+
+
+    <!-- RIGHT HAND CONTENT -->
+    <main class="main-content">
+
+
+      <!-- DASHBOARD PAGE -->
+      <section id="dashboard" class="page active-page">
+
+        <header>
+          <h1>PASSupport</h1>
+          <p>Property Management & Compliance Platform</p>
+        </header>
+
+
+        <div class="container">
+
+          <div class="welcome">
+            <h2>Welcome back 👋</h2>
+            <p>Here is an overview of your properties and compliance.</p>
+          </div>
+
+          
+<div class="card">
+              <h2> Clients </h2>
+
+              <button class="dashboard-button" data-page="Clients">
+                View Client List
+              </button>
+            </div>
+
+          
+          <div class="cards">
+
+            <div class="card">
+              <h2> Properties</h2>
+              <div class="number">0</div>
+              <p>Properties currently managed</p>
+
+              <button class="dashboard-button" data-page="properties">
+                View Properties
+              </button>
+            </div>
+
+
+            <div class="card">
+              <h2> Certificates</h2>
+              <div class="number">0</div>
+              <p>Certificates being tracked</p>
+
+              <button class="dashboard-button" data-page="certificates">
+                View Certificates
+              </button>
+            </div>
+
+
+            <div class="card">
+              <h2>⚠️ Expiring Soon</h2>
+              <div class="number">0</div>
+              <p>Certificates requiring attention</p>
+
+              <button class="dashboard-button" data-page="alerts">
+                View Alerts
+              </button>
+            </div>
+
+
+            <div class="card">
+              <h2> Assets</h2>
+              <div class="number">0</div>
+              <p> Assets Record</p>
+
+              <button class="dashboard-button" data-page="Assets">
+                Manage Assets
+              </button>
+            </div>
+
+             <div class="card">
+              <h2> Documents</h2>
+              <div class="number">0</div>
+              <p> Your docuements</p>
+
+              <button class="dashboard-button" data-page="Documents">
+               View your documents
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+ <!-- CLIENTS PAGE -->
+      <section id="clients" class="page">
+
+        <h1>Clients</h1>
+        <p>Your clients will appear here.</p>
+
+      </section>
+
+      
+      <!-- PROPERTIES PAGE -->
+      <section id="properties" class="page">
+
+        <h1>Properties</h1>
+
+        <p>Your properties will appear here.</p>
+
+        <div class="property-list">
+
+          <div class="property-item">
             <h3>No properties added yet</h3>
             <p>Start by adding your first property.</p>
+          </div>
+
         </div>
-    </div>
 
-    <button id="add-property-button">+ Add Property</button>
-</section>
+        <button id="add-property-button">
+          + Add Property
+        </button>
 
-<script src="script.js"></script>
-    <div class="card">
-      <h2>📋 Certificates</h2>
-      <div class="number">0</div>
-      <p>Certificates being tracked</p>
-      <button>View Certificates</button>
-    </div>
+      </section>
 
-    <div class="card">
-      <h2>⚠️ Expiring Soon</h2>
-      <div class="number">0</div>
-      <p>Certificates requiring attention</p>
-      <button>View Alerts</button>
-    </div>
 
-    <div class="card">
-      <h2>👥 Landlords</h2>
-      <div class="number">0</div>
-      <p>Landlord accounts</p>
-      <button>Manage Landlords</button>
-    </div>
+      <!-- CERTIFICATES PAGE -->
+      <section id="certificates" class="page">
+
+        <h1>Certificates</h1>
+        <p>Your property certificates will appear here.</p>
+
+      </section>
+
+
+      <!-- ALERTS PAGE -->
+      <section id="alerts" class="page">
+
+        <h1>Expiring Soon</h1>
+        <p>Certificates requiring your attention will appear here.</p>
+
+      </section>
+
+
+      <!-- ASSETS PAGE -->
+      <section id="Assets" class="page">
+
+        <h1>Assets</h1>
+        <p>Your assets will appear here.</p>
+
+      </section>
+
+         <!-- DOCUMENTS PAGE -->
+      <section id="documents" class="page">
+
+        <h1>documents</h1>
+
+        <p>Your documents will appear here.</p>
+
+        <div class="documents">
+
+          <div class="documents">
+            <h3>No documents added yet</h3>
+            <p>upload a document.</p>
+          </div>
+
+        </div>
+
+        <button id="upload-document-button">
+          + upload document
+        </button>
+
+      </section>
+
+    </main>
 
   </div>
 
-</div>
-<script src="script.js"></script>
+
+  <script src="script.js"></script>
+
 </body>
+
 </html>
