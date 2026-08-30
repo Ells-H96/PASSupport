@@ -10,13 +10,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
   <div class="app">
 
-
-    <!-- LEFT HAND NAVIGATION -->
+    <!-- LEFT-HAND NAVIGATION -->
     <aside class="sidebar">
 
       <h2>PASSupport</h2>
@@ -25,7 +23,7 @@
         Dashboard
       </button>
 
-       <button class="nav-button active" data-page="Clients">
+      <button class="nav-button" data-page="clients">
         Clients
       </button>
 
@@ -38,25 +36,28 @@
       </button>
 
       <button class="nav-button" data-page="alerts">
-        ⚠️ Expiring soon
+        Expiring Soon
       </button>
 
-      <button class="nav-button" data-page="Assets">
+      <button class="nav-button" data-page="assets">
         Assets
       </button>
 
-       <button class="nav-button" data-page="Documents">
+      <button class="nav-button" data-page="documents">
         Documents
       </button>
 
     </aside>
 
 
-    <!-- RIGHT HAND CONTENT -->
+    <!-- RIGHT-HAND CONTENT -->
     <main class="main-content">
 
 
+      <!-- ===================== -->
       <!-- DASHBOARD PAGE -->
+      <!-- ===================== -->
+
       <section id="dashboard" class="page active-page">
 
         <header>
@@ -72,20 +73,29 @@
             <p>Here is an overview of your properties and compliance.</p>
           </div>
 
-          
-<div class="card">
-              <h2> Clients </h2>
 
-              <button class="dashboard-button" data-page="Clients">
+          <!-- DASHBOARD CARDS -->
+
+          <div class="cards">
+
+
+            <!-- CLIENTS CARD -->
+
+            <div class="card">
+              <h2>Clients</h2>
+              <div class="number">0</div>
+              <p>Clients currently managed</p>
+
+              <button class="dashboard-button" data-page="clients">
                 View Client List
               </button>
             </div>
 
-          
-          <div class="cards">
+
+            <!-- PROPERTIES CARD -->
 
             <div class="card">
-              <h2> Properties</h2>
+              <h2>Properties</h2>
               <div class="number">0</div>
               <p>Properties currently managed</p>
 
@@ -95,8 +105,10 @@
             </div>
 
 
+            <!-- CERTIFICATES CARD -->
+
             <div class="card">
-              <h2> Certificates</h2>
+              <h2>Certificates</h2>
               <div class="number">0</div>
               <p>Certificates being tracked</p>
 
@@ -106,8 +118,10 @@
             </div>
 
 
+            <!-- ALERTS CARD -->
+
             <div class="card">
-              <h2>⚠️ Expiring Soon</h2>
+              <h2>Expiring Soon</h2>
               <div class="number">0</div>
               <p>Certificates requiring attention</p>
 
@@ -117,117 +131,191 @@
             </div>
 
 
-            <div class="card">
-              <h2> Assets</h2>
-              <div class="number">0</div>
-              <p> Assets Record</p>
+            <!-- ASSETS CARD -->
 
-              <button class="dashboard-button" data-page="Assets">
+            <div class="card">
+              <h2>Assets</h2>
+              <div class="number">0</div>
+              <p>Assets currently being managed</p>
+
+              <button class="dashboard-button" data-page="assets">
                 Manage Assets
               </button>
             </div>
 
-             <div class="card">
-              <h2> Documents</h2>
-              <div class="number">0</div>
-              <p> Your docuements</p>
 
-              <button class="dashboard-button" data-page="Documents">
-               View your documents
+            <!-- DOCUMENTS CARD -->
+
+            <div class="card">
+              <h2>Documents</h2>
+              <div class="number">0</div>
+              <p>Documents currently stored</p>
+
+              <button class="dashboard-button" data-page="documents">
+                View Documents
               </button>
             </div>
 
+
           </div>
 
         </div>
 
       </section>
 
- <!-- CLIENTS PAGE -->
+
+      <!-- ===================== -->
+      <!-- CLIENTS PAGE -->
+      <!-- ===================== -->
+
       <section id="clients" class="page">
 
-        <h1>Clients</h1>
-        <p>Your clients will appear here.</p>
+        <div class="page-header">
+          <div>
+            <h1>Clients</h1>
+            <p>Manage your clients and their property portfolios.</p>
+          </div>
+
+          <button id="add-client-button">
+            + Add Client
+          </button>
+        </div>
+
+        <div class="card">
+          <h2>No clients added yet</h2>
+          <p>Start by adding your first client to PASSupport.</p>
+        </div>
 
       </section>
 
-      
+
+      <!-- ===================== -->
       <!-- PROPERTIES PAGE -->
+      <!-- ===================== -->
+
       <section id="properties" class="page">
 
-        <h1>Properties</h1>
-
-        <p>Your properties will appear here.</p>
-
-        <div class="property-list">
-
-          <div class="property-item">
-            <h3>No properties added yet</h3>
-            <p>Start by adding your first property.</p>
+        <div class="page-header">
+          <div>
+            <h1>Properties</h1>
+            <p>View and manage all properties.</p>
           </div>
 
+          <button id="add-property-button">
+            + Add Property
+          </button>
         </div>
 
-        <button id="add-property-button">
-          + Add Property
-        </button>
+        <div class="card">
+          <h2>No properties added yet</h2>
+          <p>Start by adding your first property to PASSupport.</p>
+        </div>
 
       </section>
 
 
+      <!-- ===================== -->
       <!-- CERTIFICATES PAGE -->
+      <!-- ===================== -->
+
       <section id="certificates" class="page">
 
-        <h1>Certificates</h1>
-        <p>Your property certificates will appear here.</p>
-
-      </section>
-
-
-      <!-- ALERTS PAGE -->
-      <section id="alerts" class="page">
-
-        <h1>Expiring Soon</h1>
-        <p>Certificates requiring your attention will appear here.</p>
-
-      </section>
-
-
-      <!-- ASSETS PAGE -->
-      <section id="Assets" class="page">
-
-        <h1>Assets</h1>
-        <p>Your assets will appear here.</p>
-
-      </section>
-
-         <!-- DOCUMENTS PAGE -->
-      <section id="documents" class="page">
-
-        <h1>documents</h1>
-
-        <p>Your documents will appear here.</p>
-
-        <div class="documents">
-
-          <div class="documents">
-            <h3>No documents added yet</h3>
-            <p>upload a document.</p>
+        <div class="page-header">
+          <div>
+            <h1>Certificates</h1>
+            <p>View and manage property compliance certificates.</p>
           </div>
 
+          <button id="add-certificate-button">
+            + Add Certificate
+          </button>
         </div>
 
-        <button id="upload-document-button">
-          + upload document
-        </button>
+        <div class="card">
+          <h2>No certificates added yet</h2>
+          <p>Add your first certificate to start tracking compliance.</p>
+        </div>
 
       </section>
+
+
+      <!-- ===================== -->
+      <!-- ALERTS PAGE -->
+      <!-- ===================== -->
+
+      <section id="alerts" class="page">
+
+        <div class="page-header">
+          <div>
+            <h1>Expiring Soon</h1>
+            <p>Keep track of certificates requiring attention.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>No alerts right now</h2>
+          <p>Certificates approaching their expiry date will appear here.</p>
+        </div>
+
+      </section>
+
+
+      <!-- ===================== -->
+      <!-- ASSETS PAGE -->
+      <!-- ===================== -->
+
+      <section id="assets" class="page">
+
+        <div class="page-header">
+          <div>
+            <h1>Assets</h1>
+            <p>Keep a record of assets connected to your properties.</p>
+          </div>
+
+          <button id="add-asset-button">
+            + Add Asset
+          </button>
+        </div>
+
+        <div class="card">
+          <h2>No assets added yet</h2>
+          <p>Start building your property asset records here.</p>
+        </div>
+
+      </section>
+
+
+      <!-- ===================== -->
+      <!-- DOCUMENTS PAGE -->
+      <!-- ===================== -->
+
+      <section id="documents" class="page">
+
+        <div class="page-header">
+          <div>
+            <h1>Documents</h1>
+            <p>Store and manage important property documents.</p>
+          </div>
+
+          <button id="upload-document-button">
+            + Upload Document
+          </button>
+        </div>
+
+        <div class="card">
+          <h2>No documents added yet</h2>
+          <p>Upload your first document to get started.</p>
+        </div>
+
+      </section>
+
 
     </main>
 
   </div>
 
 
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
 
 </body>
