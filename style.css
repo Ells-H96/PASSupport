@@ -78,3 +78,10 @@ nav a {
 .hidden {
     display: none;
 }
+.page {
+    display: none;
+}
+
+.page.active-page {
+    display: block;
+}
