@@ -1,28 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Find navigation buttons
-  const navButtons = document.querySelectorAll(".nav-button");
+  /* ================================= */
+  /* PAGE ELEMENTS */
+  /* ================================= */
 
-  // Find certificate sub-navigation buttons
-  const subNavButtons = document.querySelectorAll(".nav-sub-button");
-
-  // Find dashboard buttons
-  const dashboardButtons = document.querySelectorAll(".dashboard-button");
-
-  // Find all app pages
   const pages = document.querySelectorAll(".page");
 
+  const navButtons = document.querySelectorAll(".nav-button");
 
-  // Function to open a page
+  const dashboardButtons = document.querySelectorAll(".dashboard-button");
+
+  const subButtons = document.querySelectorAll(".nav-sub-button");
+
+
+  /* ================================= */
+  /* OPEN PAGE FUNCTION */
+  /* ================================= */
+
   function openPage(pageName) {
 
-    // Hide every page
+    // Hide all pages
     pages.forEach((page) => {
       page.classList.remove("active-page");
     });
 
 
-    // Show the selected page
+    // Find selected page
     const selectedPage = document.getElementById(pageName);
 
     if (selectedPage) {
@@ -30,45 +33,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // Remove active style from main navigation
+    // Remove active state from main navigation
     navButtons.forEach((button) => {
       button.classList.remove("active");
     });
 
 
-    // Remove active style from sub-navigation
-    subNavButtons.forEach((button) => {
+    // Remove active state from submenu
+    subButtons.forEach((button) => {
       button.classList.remove("active");
     });
 
 
-    // If this is a certificate page,
-    // keep Certificates highlighted
-    if (pageName === "certificates" || pageName === "alerts") {
+    // Highlight matching main navigation button
+    const activeNavButton = document.querySelector(
+      `.nav-button[data-page="${pageName}"]`
+    );
 
-      const certificatesButton = document.querySelector(
-        '.nav-button[data-page="certificates"]'
-      );
-
-      if (certificatesButton) {
-        certificatesButton.classList.add("active");
-      }
-
-    } else {
-
-      // Highlight normal navigation button
-      const activeNavButton = document.querySelector(
-        `.nav-button[data-page="${pageName}"]`
-      );
-
-      if (activeNavButton) {
-        activeNavButton.classList.add("active");
-      }
-
+    if (activeNavButton) {
+      activeNavButton.classList.add("active");
     }
 
 
-    // Highlight the selected certificate subsection
+    // Highlight matching submenu button
     const activeSubButton = document.querySelector(
       `.nav-sub-button[data-page="${pageName}"]`
     );
@@ -80,46 +67,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // =================================
-  // MAIN SIDEBAR NAVIGATION
-  // =================================
+  /* ================================= */
+  /* NORMAL NAVIGATION BUTTONS */
+  /* ================================= */
 
   navButtons.forEach((button) => {
+
+    // Don't treat the certificate toggle as a normal page button
+    if (button.classList.contains("certificate-toggle")) {
+      return;
+    }
+
 
     button.addEventListener("click", () => {
 
       const pageName = button.dataset.page;
 
-      openPage(pageName);
+      if (pageName) {
+        openPage(pageName);
+      }
 
     });
 
   });
 
 
-  // =================================
-  // CERTIFICATE SUB-NAVIGATION
-  // =================================
-
-  subNavButtons.forEach((button) => {
-
-    button.addEventListener("click", (event) => {
-
-      // Stop the click affecting the parent button
-      event.stopPropagation();
-
-      const pageName = button.dataset.page;
-
-      openPage(pageName);
-
-    });
-
-  });
-
-
-  // =================================
-  // DASHBOARD BUTTONS
-  // =================================
+  /* ================================= */
+  /* DASHBOARD BUTTONS */
+  /* ================================= */
 
   dashboardButtons.forEach((button) => {
 
@@ -127,10 +102,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const pageName = button.dataset.page;
 
-      openPage(pageName);
+      if (pageName) {
+        openPage(pageName);
+      }
 
     });
 
   });
+
+
+  /* ================================= */
+  /* CERTIFICATE MENU TOGGLE */
+  /* ================================= */
+
+  const certificateToggle =
+    document.querySelector(".certificate-toggle");
+
+
+  if (certificateToggle) {
+
+    certificateToggle.addEventListener("click", () => {
+
+      const navGroup =
+        certificateToggle.closest(".nav-group");
+
+      navGroup.classList.toggle("open");
+
+    });
+
+  }
+
+
+  /* ================================= */
+  /* CERTIFICATE SUBMENU BUTTONS */
+  /* ================================= */
+
+  subButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+      const pageName = button.dataset.page;
+
+      if (pageName) {
+
+        openPage(pageName);
+
+      }
+
+    });
+
+  });
+
 
 });
