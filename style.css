@@ -30,24 +30,21 @@ body {
 }
 
 
-/* LOGO */
-
 .logo {
-  padding: 10px 15px 35px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  margin-bottom: 20px;
+  width: 100%;
+  background: #ffffff;
+  padding: 25px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.logo h1 {
-  margin: 0;
-  font-size: 28px;
-  color: white;
-}
-
-.logo p {
-  margin: 5px 0 0;
-  color: #9aa8b8;
-  font-size: 12px;
+.passupport-logo {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
 }
 
 
