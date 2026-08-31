@@ -1,21 +1,28 @@
-look document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
-  /* ================================= */
-  /* PAGE ELEMENTS */
-  /* ================================= */
-
-  const pages = document.querySelectorAll(".page");
+  // =================================
+  // FIND ELEMENTS
+  // =================================
 
   const navButtons = document.querySelectorAll(".nav-button");
 
-  const dashboardButtons = document.querySelectorAll(".dashboard-button");
+  const subNavButtons = document.querySelectorAll(".nav-sub-button");
 
-  const subButtons = document.querySelectorAll(".nav-sub-button");
+  const dashboardButtons =
+    document.querySelectorAll(".dashboard-button");
+
+  const pages = document.querySelectorAll(".page");
+
+  const certificateToggle =
+    document.querySelector(".certificate-toggle");
+
+  const certificateGroup =
+    document.querySelector(".nav-group");
 
 
-  /* ================================= */
-  /* OPEN PAGE FUNCTION */
-  /* ================================= */
+  // =================================
+  // OPEN PAGE
+  // =================================
 
   function openPage(pageName) {
 
@@ -25,40 +32,71 @@ look document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // Find selected page
-    const selectedPage = document.getElementById(pageName);
+    // Show selected page
+    const selectedPage =
+      document.getElementById(pageName);
 
     if (selectedPage) {
       selectedPage.classList.add("active-page");
     }
 
 
-    // Remove active state from main navigation
+    // Remove active state
     navButtons.forEach((button) => {
       button.classList.remove("active");
     });
 
-
-    // Remove active state from submenu
-    subButtons.forEach((button) => {
+    subNavButtons.forEach((button) => {
       button.classList.remove("active");
     });
 
 
-    // Highlight matching main navigation button
-    const activeNavButton = document.querySelector(
-      `.nav-button[data-page="${pageName}"]`
-    );
+    // =================================
+    // CERTIFICATE PAGES
+    // =================================
 
-    if (activeNavButton) {
-      activeNavButton.classList.add("active");
+    if (
+      pageName === "certificates" ||
+      pageName === "alerts"
+    ) {
+
+      if (certificateToggle) {
+        certificateToggle.classList.add("active");
+      }
+
+      if (certificateGroup) {
+        certificateGroup.classList.add("open");
+      }
+
     }
 
 
-    // Highlight matching submenu button
-    const activeSubButton = document.querySelector(
-      `.nav-sub-button[data-page="${pageName}"]`
-    );
+    // =================================
+    // NORMAL NAVIGATION
+    // =================================
+
+    else {
+
+      const activeButton =
+        document.querySelector(
+          `.nav-button[data-page="${pageName}"]`
+        );
+
+      if (activeButton) {
+        activeButton.classList.add("active");
+      }
+
+    }
+
+
+    // =================================
+    // ACTIVE CERTIFICATE SUBSECTION
+    // =================================
+
+    const activeSubButton =
+      document.querySelector(
+        `.nav-sub-button[data-page="${pageName}"]`
+      );
 
     if (activeSubButton) {
       activeSubButton.classList.add("active");
@@ -67,34 +105,59 @@ look document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* ================================= */
-  /* NORMAL NAVIGATION BUTTONS */
-  /* ================================= */
+  // =================================
+  // MAIN NAVIGATION
+  // =================================
 
   navButtons.forEach((button) => {
 
-    // Don't treat the certificate toggle as a normal page button
-    if (button.classList.contains("certificate-toggle")) {
-      return;
-    }
-
-
     button.addEventListener("click", () => {
 
+      // Certificates parent button
+      if (
+        button.classList.contains("certificate-toggle")
+      ) {
+
+        if (certificateGroup) {
+          certificateGroup.classList.toggle("open");
+        }
+
+        return;
+      }
+
+
+      // Normal navigation
       const pageName = button.dataset.page;
 
-      if (pageName) {
-        openPage(pageName);
-      }
+      openPage(pageName);
 
     });
 
   });
 
 
-  /* ================================= */
-  /* DASHBOARD BUTTONS */
-  /* ================================= */
+  // =================================
+  // CERTIFICATE SUBMENU
+  // =================================
+
+  subNavButtons.forEach((button) => {
+
+    button.addEventListener("click", (event) => {
+
+      event.stopPropagation();
+
+      const pageName = button.dataset.page;
+
+      openPage(pageName);
+
+    });
+
+  });
+
+
+  // =================================
+  // DASHBOARD BUTTONS
+  // =================================
 
   dashboardButtons.forEach((button) => {
 
@@ -102,57 +165,21 @@ look document.addEventListener("DOMContentLoaded", () => {
 
       const pageName = button.dataset.page;
 
-      if (pageName) {
-        openPage(pageName);
-      }
+      openPage(pageName);
 
     });
 
   });
 
 
-  /* ================================= */
-  /* CERTIFICATE MENU TOGGLE */
-  /* ================================= */
+  // =================================
+  // CREATE LUCIDE ICONS
+  // =================================
 
-  const certificateToggle =
-    document.querySelector(".certificate-toggle");
+  if (typeof lucide !== "undefined") {
 
-
-  if (certificateToggle) {
-
-    certificateToggle.addEventListener("click", () => {
-
-      const navGroup =
-        certificateToggle.closest(".nav-group");
-
-      navGroup.classList.toggle("open");
-
-    });
+    lucide.createIcons();
 
   }
 
-
-  /* ================================= */
-  /* CERTIFICATE SUBMENU BUTTONS */
-  /* ================================= */
-
-  subButtons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-      const pageName = button.dataset.page;
-
-      if (pageName) {
-
-        openPage(pageName);
-
-      }
-
-    });
-
-  });
-
-// Create Lucide icons
-lucide.createIcons();
 });
