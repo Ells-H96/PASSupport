@@ -22,99 +22,170 @@
 
     <aside class="sidebar">
 
-     <!-- LOGO -->
-<div class="logo">
 
-  <img
-    src="images/passupport-electrical.png"
-    alt="PASSupport Electrical"
-    class="passupport-logo"
-  >
+      <!-- ================================= -->
+      <!-- PASSUPPORT LOGO -->
+      <!-- ================================= -->
 
-</div>
+      <div class="logo">
 
-
-      <!-- MAIN NAVIGATION -->
-
-      <div class="nav-section">
-
-        <button class="nav-button active" data-page="dashboard">
-        <i data-lucide="layout-grid"></i>
-        <span>Dashboard</span>
-        </button>
-
-
-        <button class="nav-button" data-page="clients">
-          <i data-lucide="users"></i>
-          <span>Clients</span>
-        </button>
-
-
-        <button class="nav-button" data-page="properties">
-          <i data-lucide="house"></i>
-          <span>Properties</span>
-        </button>
-
-
-<!-- CERTIFICATES -->
-
-<div class="nav-group">
-
-  <button class="nav-button certificate-toggle" type="button">
-    <i data-lucide="file-badge"></i>
-    <span>Certificates</span>
-    <span class="nav-arrow">▸</span>
-  </button>
-
-  <div class="nav-submenu">
-
-    <button class="nav-sub-button" data-page="certificates">
-      <span>All Certificates</span>
-    </button>
-
-    <button class="nav-sub-button" data-page="alerts">
-      <i data-lucide="triangle-alert"></i>
-      <span>Expiring Soon</span>
-    </button>
-
-  </div>
-
-</div>
-
-
-        <button class="nav-button" data-page="assets">
-        <i data-lucide="toolbox"></i>
-          <span>Assets</span>
-        </button>
-
-
-        <button class="nav-button" data-page="documents">
-          <i data-lucide="file-text"></i>
-          <span>Documents</span>
-        </button>
-
-          <button class="nav-button" data-page="Calendar">
-            <i data-lucide="calendar-days"></i>
-          <span>Calendar</span>
-        </button>
+        <img
+          src="images/passupport-electrical.png"
+          alt="PASSupport Electrical"
+          class="passupport-logo"
+        >
 
       </div>
 
 
+      <!-- ================================= -->
+      <!-- MAIN NAVIGATION -->
+      <!-- ================================= -->
+
+      <div class="nav-section">
+
+
+        <!-- DASHBOARD -->
+
+        <button class="nav-button active" data-page="dashboard">
+
+          <i data-lucide="layout-dashboard"></i>
+
+          <span>Dashboard</span>
+
+        </button>
+
+
+        <!-- CLIENTS -->
+
+        <button class="nav-button" data-page="clients">
+
+          <i data-lucide="users"></i>
+
+          <span>Clients</span>
+
+        </button>
+
+
+        <!-- PROPERTIES -->
+
+        <button class="nav-button" data-page="properties">
+
+          <i data-lucide="house"></i>
+
+          <span>Properties</span>
+
+        </button>
+
+
+        <!-- ================================= -->
+        <!-- CERTIFICATES -->
+        <!-- ================================= -->
+
+        <div class="nav-group">
+
+          <button
+            class="nav-button certificate-toggle"
+            type="button"
+          >
+
+            <i data-lucide="file-badge"></i>
+
+            <span>Certificates</span>
+
+            <span class="nav-arrow">▸</span>
+
+          </button>
+
+
+          <!-- CERTIFICATE SUBMENU -->
+
+          <div class="nav-submenu">
+
+            <button
+              class="nav-sub-button"
+              data-page="certificates"
+            >
+
+              <i data-lucide="files"></i>
+
+              <span>All Certificates</span>
+
+            </button>
+
+
+            <button
+              class="nav-sub-button"
+              data-page="alerts"
+            >
+
+              <i data-lucide="triangle-alert"></i>
+
+              <span>Expiring Soon</span>
+
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- ASSETS -->
+
+        <button class="nav-button" data-page="assets">
+
+          <i data-lucide="toolbox"></i>
+
+          <span>Assets</span>
+
+        </button>
+
+
+        <!-- DOCUMENTS -->
+
+        <button class="nav-button" data-page="documents">
+
+          <i data-lucide="file-text"></i>
+
+          <span>Documents</span>
+
+        </button>
+
+
+        <!-- CALENDAR -->
+
+        <button class="nav-button" data-page="calendar">
+
+          <i data-lucide="calendar-days"></i>
+
+          <span>Calendar</span>
+
+        </button>
+
+
+      </div>
+
+
+      <!-- ================================= -->
       <!-- SIDEBAR FOOTER -->
+      <!-- ================================= -->
 
       <div class="sidebar-bottom">
 
         <div class="support-box">
 
           <div>
+
             <strong>Need help?</strong>
+
             <p>Contact support</p>
+
           </div>
 
         </div>
 
       </div>
+
 
     </aside>
 
@@ -126,21 +197,34 @@
     <main class="main-content">
 
 
-      <!-- ===================== -->
+      <!-- ================================= -->
       <!-- DASHBOARD PAGE -->
-      <!-- ===================== -->
+      <!-- ================================= -->
 
-      <section id="dashboard" class="page active-page">
+      <section
+        id="dashboard"
+        class="page active-page"
+      >
+
+
+        <!-- DASHBOARD HEADER -->
 
         <div class="top-header">
 
           <div>
+
             <h1>Dashboard</h1>
-            <p>Welcome to your property management dashboard.</p>
+
+            <p>
+              Welcome to your property management dashboard.
+            </p>
+
           </div>
 
         </div>
 
+
+        <!-- WELCOME -->
 
         <div class="welcome">
 
@@ -154,7 +238,9 @@
         </div>
 
 
+        <!-- ================================= -->
         <!-- DASHBOARD CARDS -->
+        <!-- ================================= -->
 
         <div class="cards">
 
@@ -163,15 +249,20 @@
 
           <div class="card">
 
-          <i data-lucide="users"></i>
+            <i data-lucide="users"></i>
 
             <h2>Clients</h2>
 
             <div class="number">0</div>
 
-            <p>Clients currently managed</p>
+            <p>
+              Clients currently managed
+            </p>
 
-            <button class="dashboard-button" data-page="clients">
+            <button
+              class="dashboard-button"
+              data-page="clients"
+            >
               View Client List →
             </button>
 
@@ -182,15 +273,20 @@
 
           <div class="card">
 
-           <i data-lucide="house"></i>
+            <i data-lucide="house"></i>
 
             <h2>Properties</h2>
 
             <div class="number">0</div>
 
-            <p>Properties currently managed</p>
+            <p>
+              Properties currently managed
+            </p>
 
-            <button class="dashboard-button" data-page="properties">
+            <button
+              class="dashboard-button"
+              data-page="properties"
+            >
               View Properties →
             </button>
 
@@ -201,15 +297,20 @@
 
           <div class="card">
 
-           <i data-lucide="file-badge"></i>
+            <i data-lucide="file-badge"></i>
 
             <h2>Certificates</h2>
 
             <div class="number">0</div>
 
-            <p>Certificates being tracked</p>
+            <p>
+              Certificates being tracked
+            </p>
 
-            <button class="dashboard-button" data-page="certificates">
+            <button
+              class="dashboard-button"
+              data-page="certificates"
+            >
               View Certificates →
             </button>
 
@@ -226,9 +327,14 @@
 
             <div class="number">0</div>
 
-            <p>Assets currently being managed</p>
+            <p>
+              Assets currently being managed
+            </p>
 
-            <button class="dashboard-button" data-page="assets">
+            <button
+              class="dashboard-button"
+              data-page="assets"
+            >
               Manage Assets →
             </button>
 
@@ -245,27 +351,38 @@
 
             <div class="number">0</div>
 
-            <p>Documents currently stored</p>
+            <p>
+              Documents currently stored
+            </p>
 
-            <button class="dashboard-button" data-page="documents">
+            <button
+              class="dashboard-button"
+              data-page="documents"
+            >
               View Documents →
             </button>
 
           </div>
 
-           <!-- CALENDAR -->
+
+          <!-- CALENDAR -->
 
           <div class="card">
 
             <i data-lucide="calendar-days"></i>
 
-            <h2>calendar</h2>
+            <h2>Calendar</h2>
 
             <div class="number">0</div>
 
-            <p>Documents currently stored</p>
+            <p>
+              Important dates currently tracked
+            </p>
 
-            <button class="dashboard-button" data-page="calendar">
+            <button
+              class="dashboard-button"
+              data-page="calendar"
+            >
               View Calendar →
             </button>
 
@@ -277,11 +394,14 @@
       </section>
 
 
-      <!-- ===================== -->
+      <!-- ================================= -->
       <!-- CLIENTS PAGE -->
-      <!-- ===================== -->
+      <!-- ================================= -->
 
-      <section id="clients" class="page">
+      <section
+        id="clients"
+        class="page"
+      >
 
         <div class="page-header">
 
@@ -305,7 +425,9 @@
 
         <div class="card empty-card">
 
-          <h2>No clients added yet</h2>
+          <h2>
+            No clients added yet
+          </h2>
 
           <p>
             Start by adding your first client to PASSupport.
@@ -316,11 +438,14 @@
       </section>
 
 
-      <!-- ===================== -->
+      <!-- ================================= -->
       <!-- PROPERTIES PAGE -->
-      <!-- ===================== -->
+      <!-- ================================= -->
 
-      <section id="properties" class="page">
+      <section
+        id="properties"
+        class="page"
+      >
 
         <div class="page-header">
 
@@ -344,7 +469,9 @@
 
         <div class="card empty-card">
 
-          <h2>No properties added yet</h2>
+          <h2>
+            No properties added yet
+          </h2>
 
           <p>
             Start by adding your first property to PASSupport.
@@ -355,11 +482,15 @@
       </section>
 
 
-      <!-- ===================== -->
+      <!-- ================================= -->
       <!-- CERTIFICATES PAGE -->
-      <!-- ===================== -->
+      <!-- ================================= -->
 
-      <section id="certificates" class="page">
+      <section
+        id="certificates"
+        class="page"
+      >
+
 
         <div class="page-header">
 
@@ -373,23 +504,6 @@
 
           </div>
 
-           <!-- EXPIRING SOON -->
-
-          <div class="card">
-
-            <div class="card-icon">⚠</div>
-
-            <h2>Expiring Soon</h2>
-
-            <div class="number">0</div>
-
-            <p>Certificates requiring attention</p>
-
-            <button class="dashboard-button" data-page="alerts">
-              View Alerts →
-            </button>
-
-          </div>
 
           <button id="add-certificate-button">
             + Add Certificate
@@ -398,9 +512,41 @@
         </div>
 
 
+        <!-- EXPIRING SOON -->
+
+        <div class="card">
+
+          <i data-lucide="triangle-alert"></i>
+
+          <h2>
+            Expiring Soon
+          </h2>
+
+          <div class="number">
+            0
+          </div>
+
+          <p>
+            Certificates requiring attention
+          </p>
+
+          <button
+            class="dashboard-button"
+            data-page="alerts"
+          >
+            View Alerts →
+          </button>
+
+        </div>
+
+
+        <!-- EMPTY CERTIFICATES -->
+
         <div class="card empty-card">
 
-          <h2>No certificates added yet</h2>
+          <h2>
+            No certificates added yet
+          </h2>
 
           <p>
             Add your first certificate to start tracking compliance.
@@ -411,17 +557,22 @@
       </section>
 
 
-      <!-- ===================== -->
-      <!-- ALERTS PAGE -->
-      <!-- ===================== -->
+      <!-- ================================= -->
+      <!-- EXPIRING SOON PAGE -->
+      <!-- ================================= -->
 
-      <section id="alerts" class="page">
+      <section
+        id="alerts"
+        class="page"
+      >
 
         <div class="page-header">
 
           <div>
 
-            <h1>Expiring Soon</h1>
+            <h1>
+              Expiring Soon
+            </h1>
 
             <p>
               Keep track of certificates requiring attention.
@@ -434,7 +585,11 @@
 
         <div class="card empty-card">
 
-          <h2>No alerts right now 🎉</h2>
+          <i data-lucide="triangle-alert"></i>
+
+          <h2>
+            No alerts right now 🎉
+          </h2>
 
           <p>
             Certificates approaching their expiry date
@@ -446,21 +601,27 @@
       </section>
 
 
-      <!-- ===================== -->
+      <!-- ================================= -->
       <!-- ASSETS PAGE -->
-      <!-- ===================== -->
+      <!-- ================================= -->
 
-      <section id="assets" class="page">
+      <section
+        id="assets"
+        class="page"
+      >
 
         <div class="page-header">
 
           <div>
 
-            <h1>Assets</h1>
+            <h1>
+              Assets
+            </h1>
 
             <p>
               Keep a record of assets connected
-              to your properties. </p>
+              to your properties.
+            </p>
 
           </div>
 
@@ -474,7 +635,9 @@
 
         <div class="card empty-card">
 
-          <h2>No assets added yet</h2>
+          <h2>
+            No assets added yet
+          </h2>
 
           <p>
             Start building your property asset records here.
@@ -485,17 +648,22 @@
       </section>
 
 
-      <!-- ===================== -->
+      <!-- ================================= -->
       <!-- DOCUMENTS PAGE -->
-      <!-- ===================== -->
+      <!-- ================================= -->
 
-      <section id="documents" class="page">
+      <section
+        id="documents"
+        class="page"
+      >
 
         <div class="page-header">
 
           <div>
 
-            <h1>Documents</h1>
+            <h1>
+              Documents
+            </h1>
 
             <p>
               Store and manage important property documents.
@@ -513,7 +681,9 @@
 
         <div class="card empty-card">
 
-          <h2>No documents added yet</h2>
+          <h2>
+            No documents added yet
+          </h2>
 
           <p>
             Upload your first document to get started.
@@ -523,33 +693,60 @@
 
       </section>
 
-      <!-- ===================== -->
-      <!-- CALENDAR -->
-      <!-- ===================== -->
 
-      <section id="Calendar" class="page">
+      <!-- ================================= -->
+      <!-- CALENDAR PAGE -->
+      <!-- ================================= -->
+
+      <section
+        id="calendar"
+        class="page"
+      >
 
         <div class="page-header">
 
           <div>
 
-            <h1>Calendar</h1>
+            <h1>
+              Calendar
+            </h1>
 
             <p>
-              Remember important dates with your calendar
+              Remember important dates with your calendar.
             </p>
 
           </div>
-          
-     </section>
-      
+
+        </div>
+
+
+        <div class="card empty-card">
+
+          <i data-lucide="calendar-days"></i>
+
+          <h2>
+            No calendar events yet
+          </h2>
+
+          <p>
+            Important property dates and reminders
+            will appear here.
+          </p>
+
+        </div>
+
+      </section>
+
 
     </main>
 
   </div>
 
 
+  <!-- ================================= -->
   <!-- JAVASCRIPT -->
+  <!-- ================================= -->
+
   <script src="script.js"></script>
 
 </body>
