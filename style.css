@@ -10,7 +10,9 @@ body {
 }
 
 
+/* ================================= */
 /* MAIN APP LAYOUT */
+/* ================================= */
 
 .app {
   display: flex;
@@ -18,7 +20,9 @@ body {
 }
 
 
+/* ================================= */
 /* LEFT SIDEBAR */
+/* ================================= */
 
 .sidebar {
   width: 240px;
@@ -29,6 +33,7 @@ body {
   flex-shrink: 0;
 }
 
+
 /* ================================= */
 /* PASSUPPORT LOGO AREA */
 /* ================================= */
@@ -37,7 +42,6 @@ body {
   width: 100%;
   background: #ffffff;
   padding: 20px 15px;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,10 +52,13 @@ body {
   max-width: 250px;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
 
+/* ================================= */
 /* NAVIGATION */
+/* ================================= */
 
 .navigation {
   display: flex;
@@ -60,7 +67,9 @@ body {
 }
 
 
+/* ================================= */
 /* NAVIGATION BUTTONS */
+/* ================================= */
 
 .nav-button {
   width: 100%;
@@ -80,7 +89,9 @@ body {
 }
 
 
+/* ================================= */
 /* HOVER */
+/* ================================= */
 
 .nav-button:hover {
   background: rgba(255, 255, 255, 0.08);
@@ -88,7 +99,9 @@ body {
 }
 
 
+/* ================================= */
 /* ACTIVE PAGE */
+/* ================================= */
 
 .nav-button.active {
   background: #2563eb;
@@ -96,7 +109,53 @@ body {
 }
 
 
+/* ================================= */
+/* CERTIFICATES GROUP */
+/* ================================= */
+
+.nav-group {
+  width: 100%;
+}
+
+
+/* ================================= */
+/* CERTIFICATES SUBMENU */
+/* ================================= */
+
+.nav-submenu {
+  padding-left: 25px;
+  padding-right: 8px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.nav-sub-button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #9eacbd;
+  padding: 9px 12px;
+  text-align: left;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.nav-sub-button:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+}
+
+.nav-sub-button.active {
+  color: white;
+  background: rgba(37, 99, 235, 0.35);
+}
+
+
+/* ================================= */
 /* RIGHT HAND CONTENT */
+/* ================================= */
 
 .main-content {
   flex: 1;
@@ -106,7 +165,9 @@ body {
 }
 
 
+/* ================================= */
 /* PAGES */
+/* ================================= */
 
 .page {
   display: none;
@@ -117,7 +178,9 @@ body {
 }
 
 
+/* ================================= */
 /* DASHBOARD HEADER */
+/* ================================= */
 
 header {
   background: white;
@@ -138,7 +201,9 @@ header p {
 }
 
 
+/* ================================= */
 /* WELCOME SECTION */
+/* ================================= */
 
 .welcome {
   margin-bottom: 25px;
@@ -153,7 +218,9 @@ header p {
 }
 
 
+/* ================================= */
 /* DASHBOARD CARDS */
+/* ================================= */
 
 .cards {
   display: grid;
@@ -162,7 +229,9 @@ header p {
 }
 
 
+/* ================================= */
 /* INDIVIDUAL CARD */
+/* ================================= */
 
 .card {
   background: white;
@@ -182,7 +251,9 @@ header p {
 }
 
 
+/* ================================= */
 /* NUMBERS */
+/* ================================= */
 
 .number {
   font-size: 36px;
@@ -192,7 +263,9 @@ header p {
 }
 
 
+/* ================================= */
 /* BUTTONS */
+/* ================================= */
 
 button,
 .dashboard-button,
@@ -215,7 +288,9 @@ button:hover,
 }
 
 
+/* ================================= */
 /* PAGE HEADINGS */
+/* ================================= */
 
 .page > h1 {
   font-size: 32px;
@@ -223,7 +298,9 @@ button:hover,
 }
 
 
+/* ================================= */
 /* PROPERTY LIST */
+/* ================================= */
 
 .property-list,
 .documents {
@@ -231,7 +308,9 @@ button:hover,
 }
 
 
+/* ================================= */
 /* PROPERTY ITEM */
+/* ================================= */
 
 .property-item {
   background: white;
@@ -242,7 +321,9 @@ button:hover,
 }
 
 
+/* ================================= */
 /* RESPONSIVE */
+/* ================================= */
 
 @media (max-width: 800px) {
 
@@ -269,24 +350,4 @@ button:hover,
     padding: 20px;
   }
 
-}
-/* ================================= */
-/* PASSUPPORT LOGO */
-/* ================================= */
-
-.logo {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 15px;
-  box-sizing: border-box;
-}
-
-.passupport-logo {
-  width: 100%;
-  max-width: 240px;
-  height: auto;
-  display: block;
-  object-fit: contain;
 }
