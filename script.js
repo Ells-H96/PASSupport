@@ -1,9 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Find all navigation buttons
+  // Find navigation buttons
   const navButtons = document.querySelectorAll(".nav-button");
 
-  // Find all dashboard buttons
+  // Find certificate sub-navigation buttons
+  const subNavButtons = document.querySelectorAll(".nav-sub-button");
+
+  // Find dashboard buttons
   const dashboardButtons = document.querySelectorAll(".dashboard-button");
 
   // Find all app pages
@@ -27,25 +30,60 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // Remove active style from navigation
+    // Remove active style from main navigation
     navButtons.forEach((button) => {
       button.classList.remove("active");
     });
 
 
-    // Highlight the matching navigation button
-    const activeNavButton = document.querySelector(
-      `.nav-button[data-page="${pageName}"]`
+    // Remove active style from sub-navigation
+    subNavButtons.forEach((button) => {
+      button.classList.remove("active");
+    });
+
+
+    // If this is a certificate page,
+    // keep Certificates highlighted
+    if (pageName === "certificates" || pageName === "alerts") {
+
+      const certificatesButton = document.querySelector(
+        '.nav-button[data-page="certificates"]'
+      );
+
+      if (certificatesButton) {
+        certificatesButton.classList.add("active");
+      }
+
+    } else {
+
+      // Highlight normal navigation button
+      const activeNavButton = document.querySelector(
+        `.nav-button[data-page="${pageName}"]`
+      );
+
+      if (activeNavButton) {
+        activeNavButton.classList.add("active");
+      }
+
+    }
+
+
+    // Highlight the selected certificate subsection
+    const activeSubButton = document.querySelector(
+      `.nav-sub-button[data-page="${pageName}"]`
     );
 
-    if (activeNavButton) {
-      activeNavButton.classList.add("active");
+    if (activeSubButton) {
+      activeSubButton.classList.add("active");
     }
 
   }
 
 
-  // Sidebar navigation clicks
+  // =================================
+  // MAIN SIDEBAR NAVIGATION
+  // =================================
+
   navButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
@@ -59,7 +97,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // Dashboard card button clicks
+  // =================================
+  // CERTIFICATE SUB-NAVIGATION
+  // =================================
+
+  subNavButtons.forEach((button) => {
+
+    button.addEventListener("click", (event) => {
+
+      // Stop the click affecting the parent button
+      event.stopPropagation();
+
+      const pageName = button.dataset.page;
+
+      openPage(pageName);
+
+    });
+
+  });
+
+
+  // =================================
+  // DASHBOARD BUTTONS
+  // =================================
+
   dashboardButtons.forEach((button) => {
 
     button.addEventListener("click", () => {
