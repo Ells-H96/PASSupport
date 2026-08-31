@@ -270,3 +270,23 @@ button:hover,
   }
 
 }
+/* ================================= */
+/* PASSUPPORT LOGO */
+/* ================================= */
+
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+.passupport-logo {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
