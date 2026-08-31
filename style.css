@@ -87,7 +87,44 @@ body {
 .nav-button span {
   margin-left: 8px;
 }
+/* ================================= */
+/* SIDEBAR ICONS */
+/* ================================= */
 
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-button svg {
+  width: 19px;
+  height: 19px;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
+
+.nav-button span {
+  margin-left: 0;
+}
+
+
+/* ================================= */
+/* CERTIFICATE SUBMENU ICONS */
+/* ================================= */
+
+.nav-sub-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-sub-button svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2;
+  flex-shrink: 0;
+}
 
 /* ================================= */
 /* HOVER */
