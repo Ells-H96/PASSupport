@@ -351,3 +351,78 @@ button:hover,
   }
 
 }
+/* ================================= */
+/* SIDEBAR SUBMENUS */
+/* ================================= */
+
+.nav-group {
+  width: 100%;
+}
+
+
+/* Certificate button */
+
+.certificate-toggle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* Arrow */
+
+.nav-arrow {
+  margin-left: auto;
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+
+/* Hidden by default */
+
+.nav-submenu {
+  display: none;
+  padding-left: 18px;
+}
+
+
+/* Show submenu */
+
+.nav-group.open .nav-submenu {
+  display: block;
+}
+
+
+/* Rotate arrow */
+
+.nav-group.open .nav-arrow {
+  transform: rotate(90deg);
+}
+
+
+/* Submenu buttons */
+
+.nav-sub-button {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #9aa8b8;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+
+.nav-sub-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+
+.nav-sub-button.active {
+  color: white;
+  background: rgba(37, 99, 235, 0.25);
+}
