@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+look document.addEventListener("DOMContentLoaded", () => {
 
   /* ================================= */
   /* PAGE ELEMENTS */
@@ -153,5 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-
+// Create Lucide icons
+lucide.createIcons();
 });
